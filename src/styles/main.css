@@ -1,0 +1,349 @@
+/* Reset and basic styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Header styles */
+header {
+  background-color: #333;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  position: relative;
+}
+
+.skip-link {
+  position: absolute;
+  top: -60px;
+  left: 0;
+  background-color: #33bf17fd;
+  border-radius: 20px;
+  color: white;
+  padding: 8px;
+  z-index: 100;
+  text-decoration: none;
+}
+
+.skip-link:focus {
+  top: 0;
+}
+
+.nav-brand {
+  min-height: 44px;
+  min-width: 44px;
+  color: white;
+  font-size: 1.5em;
+}
+
+.nav-items ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: none;
+  background-color: #333;
+  position: absolute;
+  top: 50px;
+  right: 0;
+  width: 100%;
+}
+
+.nav-items.open ul {
+  display: flex;
+  flex-direction: column;
+}
+
+.nav-items ul li {
+  padding: 10px 20px;
+  min-width: 44px;
+  min-height: 44px;
+}
+
+.nav-items ul li a {
+  color: white;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 44px;
+  min-height: 44px;
+}
+
+
+
+/* Hero section styles */
+.hero {
+  width: 100%;
+  height: 60vh;
+  position: relative;
+  background-image: url('../public/images/heros/hero-image_1.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* Explore restaurants section styles */
+.explore-restaurants {
+  text-align: center;
+  padding: 20px;
+}
+
+.explore-restaurants h2 {
+  margin-bottom: 20px;
+}
+
+.restaurant-list {
+  padding: 10px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  justify-content: space-between; /* Align items evenly horizontally */
+  align-content: center; /* Center items vertically */
+  margin-top: auto;
+}
+
+.restaurant-item {
+  position: relative;
+  width: 100%;
+  background-color: #ebebeb;
+  border-radius: 5px;
+  margin: 10px auto;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px; /* Add space at the bottom of each item */
+}
+
+.restaurant-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.restaurant-info h3 {
+  margin: 10px 0;
+}
+
+.restaurant-info p {
+  margin: 5px 0;
+}
+
+.restaurant-city,
+.restaurant-rating {
+  background-color: black;
+  color: white;
+  padding: 5px;
+  display: inline-block;
+  margin-bottom: 10px;
+  border-radius: 4px;
+}
+
+.detail-link {
+  text-align: center;
+  min-width: 44px;
+  min-height: 44px;
+  display: inline-block;
+  padding: 10px 15px;
+  background-color: #007bff;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+.detail-link:hover {
+  background-color: #0056b3;
+}
+
+/* Footer styles */
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+}
+
+/* Container for restaurant details */
+#restaurant {
+  padding: 10px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+/* Restaurant image styles */
+#restaurant img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+/* Restaurant name and description */
+#restaurant .restaurant-info {
+  margin-bottom: 10px;
+}
+
+#restaurant .restaurant-info h1 {
+  font-size: 1.5em;
+  margin-bottom: 5px;
+}
+
+#restaurant .restaurant-info p {
+  margin-bottom: 10px;
+}
+
+/* Restaurant details (like city, rating) */
+#restaurant .restaurant-details {
+  margin-bottom: 10px;
+}
+
+#restaurant .restaurant-details .detail-item {
+  display: inline-block;
+  background-color: black;
+  color: white;
+  padding: 5px 10px;
+  margin-right: 10px;
+  border-radius: 4px;
+}
+
+/* Favorite button container */
+#favoriteButtonContainer {
+  margin-top: 10px;
+}
+
+/* Favorite button styles */
+button#favoriteButton {
+  min-width: 44px;
+  min-height: 44px;
+  background-color: #0ece00;
+  color: #fff;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#favoriteButton:hover {
+  background-color: #083e78;
+}
+
+/* Error message styles */
+.error-message {
+  color: red;
+  font-style: italic;
+}
+
+#newNoteName{
+  min-height: 44px;
+  min-width: 44px;
+}
+
+#submitNote{
+  min-width: 44px;
+  min-height: 44px;
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+
+#hamburgerButton {
+  display: none;
+}
+
+/* Responsive adjustments */
+
+  .nav-items {
+    display: flex;
+    align-items: center;
+  }
+
+  .nav-items ul {
+    position: static;
+    display: flex;
+    background: none;
+    width: auto;
+  }
+
+  .nav-items ul li {
+    margin-left: 20px;
+    min-width: 44px;
+  min-height: 44px;
+  }
+
+  .restaurant-list {
+    grid-template-columns: repeat(auto-fit, minmax(auto-fit, 1fr));
+  }
+
+  #restaurant {
+    padding: 20px;
+  }
+
+  #restaurant .restaurant-info h1 {
+    font-size: 1.8em;
+  }
+
+  .hero {
+    height: 80vh;
+  }
+
+
+  #hamburgerButton {
+    display: none;
+  }
+
+  @media screen and (min-width: 600px){
+    .nav-items ul li a {
+      color: white;
+      text-decoration: none;
+      min-width: 44px;
+      min-height: 44px;
+    }
+  }
+  
+  @media screen and (max-width: 600px) {
+    #hamburgerButton {
+      display: block; /* Show hamburger button */
+      font-size: 1.5em;
+      background-color: transparent;
+      border: none;
+      cursor: pointer;
+      padding: 0;
+      margin-right: 20px;
+      color: white;
+      min-width: 44px;
+      min-height: 44px;
+    }
+  
+    .nav-items {
+      display: none; /* Initially hide nav items */
+    }
+  
+    .nav-items.open {
+      display: block; /* Show nav items when menu is open */
+    }
+  
+    .nav-items ul {
+      flex-direction: column;
+      width: 100%;
+    }
+
+    .nav-items ul li a {
+      color: white;
+      text-decoration: none;
+      min-width: 44px;
+      min-height: 44px;
+    }
+  }
+  
